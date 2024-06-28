@@ -36,7 +36,8 @@ for (const img of images) {
   newImage.src = img.url;
   newImage.alt = img.alt;
   newImage.style.display = "block";
-  newImage.style.maxWidth = "600px";
+  newImage.style.maxWidth = "360px";
+  newImage.style.maxHeight = "300px";
 
   const elem = document.querySelector('.gallery');
   elem.append(listElem);
@@ -47,8 +48,13 @@ const gal = document.querySelector('.gallery');
 
 gal.style.display = "flex";
 gal.style.flexWrap = "wrap";
-gal.style.gap = "8px";
-gal.style.listStyleType = "none";
+gal.style.justifyContent = "center";
+gal.style.columnGap = "24px";
+gal.style.rowGap = "48px";
+gal.style.paddingTop = "100px";
+gal.style.paddingBottom = "100px";
+gal.style.paddingLeft = "100px";
+gal.style.paddingRight = "100px";
 
 
 
