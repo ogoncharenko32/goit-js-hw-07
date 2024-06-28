@@ -56,6 +56,8 @@ gal.style.paddingBottom = "100px";
 gal.style.paddingLeft = "100px";
 gal.style.paddingRight = "100px";
 gal.style.maxWidth = "1440px";
+gal.style.marginLeft = "auto";
+gal.style.marginRight = "auto";
 
 
 

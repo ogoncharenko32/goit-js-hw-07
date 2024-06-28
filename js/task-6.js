@@ -137,12 +137,13 @@ destrButton.onmouseover = function () {
   this.style.background="#ff7070";
 }
 destrButton.onmouseout = function () {
-  this.style.background="#4e75ff";
+  this.style.background="#ff4e4e";
 }
 
 const boxes = document.querySelector("#boxes");
 boxes.style.display = "flex";
-boxes.style.width = "486px";
+boxes.style.flexBasis = "content";
+boxes.style.minWidth = "486px";
 boxes.style.marginTop = "16px";
 boxes.style.marginLeft = "auto";
 boxes.style.marginRight = "auto";
@@ -151,4 +152,8 @@ boxes.style.padding = "32px 28px";
 boxes.style.flexWrap = "wrap";
 boxes.style.rowGap = "16px";
 boxes.style.columnGap = "44px";
+
+const b = document.querySelector("body");
+b.style.display = "flex";
+b.style.flexDirection = "column"
 
