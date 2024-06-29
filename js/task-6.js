@@ -9,7 +9,8 @@ function createBoxes(amount) {
   let startWidth = 30;
   let startHeight = 30;
   
-  
+  const newFragment = document.createDocumentFragment();
+
   for (let i = 1; i <= amount; i++) {
     const newBox = document.createElement("div");
 
@@ -18,11 +19,13 @@ function createBoxes(amount) {
     newBox.style.backgroundColor = getRandomHexColor();
     newBox.classList.add('box');
 
-    boxes.append(newBox);
+    newFragment.append(newBox);
 
     startWidth += 10;
     startHeight += 10;
   }
+  boxes.append(newFragment);
+
   const form = document.querySelector("input");
   form.value = "";
   number = 0;

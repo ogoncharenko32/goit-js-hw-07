@@ -25,9 +25,9 @@ const images = [
   }
 ];
 
+const newFragment = document.createDocumentFragment();
 
 for (const img of images) {  
-
   const listElem = document.createElement("li");
   const newImage = document.createElement("img");
   
@@ -39,12 +39,12 @@ for (const img of images) {
   newImage.style.maxWidth = "360px";
   newImage.style.maxHeight = "300px";
 
-  const elem = document.querySelector('.gallery');
-  elem.append(listElem);
   listElem.append(newImage);
+  newFragment.append(listElem);
 }
 
 const gal = document.querySelector('.gallery');
+gal.append(newFragment);
 
 gal.style.display = "flex";
 gal.style.flexWrap = "wrap";
